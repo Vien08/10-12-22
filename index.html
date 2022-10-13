@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="index.js"></script>
+    <title>Converter</title>
+</head>
+<body>
+    <div class="container-md my-5">
+        <form class="bg-color5 p-4 rounded">
+            <h2 class="text-center text-light">Example Converter</h2>
+            <p id="formula" class="text-center fw-bold text-light">Formula</p>
+
+            <div class="row justify-content-center">
+                <div class="col-10 d-flex justify-content-center">
+                    <div class="form-floating">
+                        <input type="From" class="form-control bg-color2 text-center" id="floatingInput1" placeholder="From"
+                        onkeyup="
+                       (paoFunction2());
+                        //  document.getElementById('floatingInput2').value = (kiloFunction()); 
+                    
+                        ">
+                        <label id="label1" class="text-muted" for="floatingInput">From :</label>
+                    </div>
+                    <label class="text-light d-inline-flex align-items-center fw-bold m-3">=</label>
+                    <div class="form-floating">
+                        <input type="To" class="form-control bg-color2 text-center" disabled id="floatingInput2" placeholder="To">
+                        <label id="label2" class="text-muted" for="floatingInput">To :</label>
+                    </div>               
+                </div>
+            </div>
+            <br>
+            <!-- Select Option -->
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7 col-10 d-flex">
+                    <select id="selection" class="form-select form-select-sm me-3 bg-color2 text-center" aria-label=".form-select-sm example"
+                    onclick="(paoFunction());">
+                        <option value="0" selected>Open this select menu</option>
+                        <option value="1">Kilogram to pounds</option>
+                        <option value="2">Dollar to Peso</option>
+                        <option value="3">Gram to Miligram</option>
+                    </select>  
+                    <button type="button" class="btn btn-outline-light rounded" 
+                    onclick="(ClearFields())">Clear</button>
+                </div>    
+            </div>
+        </form>
+    </div>
+    
+       
+</body>
+</html>
